@@ -1,0 +1,3 @@
+email_source      = "No Reply <no-reply@example.com>"
+email_destination = "Lovely Ops People <lovely-ops-people@example.com>"
+enabled_regions   = ["eu-west-1", "us-east-1"]

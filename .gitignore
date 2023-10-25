@@ -3,3 +3,15 @@
 plan
 terraform.tfstate
 terraform.tfstate*
+dist/
+node_modules/
+
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+variables.auto.tfvars
