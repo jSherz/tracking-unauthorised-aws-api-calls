@@ -3,23 +3,23 @@ import * as handlebars from "handlebars";
 export const HTML_EMAIL_TEMPLATE =
   handlebars.compile(`Here's a report of unauthorised AWS access since {{startDate}}:
 
-<table>
+<table style="border: solid 1px #666">
   <thead>
-  <th>event source (service)</th>
-  <th>event name</th>
-  <th>number of occurrences</th>
+  <th style="background-color: #ccc; border: solid 1px #666; padding: 4px">event source (service)</th>
+  <th style="background-color: #ccc; border: solid 1px #666; padding: 4px">event name</th>
+  <th style="background-color: #ccc; border: solid 1px #666; padding: 4px">number of occurrences</th>
   </thead>
 
   <tbody>
-  {{#each finding}}
+  {{#each findings}}
     <tr>
-      <td>
+      <td style="border: solid 1px #666; padding: 4px">
         {{eventSource}}
       </td>
-      <td>
+      <td style="border: solid 1px #666; padding: 4px">
         {{eventName}}
       </td>
-      <td>
+      <td style="border: solid 1px #666; padding: 4px">
         {{numOccurrences}}
       </td>
     </tr>
@@ -32,7 +32,7 @@ export const TEXT_EMAIL_TEMPLATE =
   handlebars.compile(`Here's a report of unauthorised AWS access since {{startDate}}:
 
 event source (service),event name,number of occurrences
-{{#each finding}}
+{{#each findings}}
 {{eventSource}}{{eventName}}{{numOccurrences}}
 {{/each}}
 `);

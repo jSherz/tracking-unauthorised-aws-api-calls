@@ -46,3 +46,9 @@ variable "working_directory" {
   type        = string
   description = "Typically the folder containing the package.json at the root of your Lambda project."
 }
+
+variable "timeout" {
+  type        = number
+  description = "How many seconds can the Lambda run for?"
+  default     = 29
+}

@@ -24,6 +24,7 @@ resource "aws_lambda_function" "this" {
   runtime          = "nodejs18.x"
   filename         = data.node-lambda-packager_package.this.filename
   source_code_hash = data.node-lambda-packager_package.this.source_code_hash
+  timeout          = var.timeout
 
   reserved_concurrent_executions = var.reserved_concurrent_executions
 

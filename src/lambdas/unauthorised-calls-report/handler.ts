@@ -159,11 +159,11 @@ async function queryForUnauthorisedAccess(
     }),
   );
 
-  return (results.ResultSet?.Rows || []).map(row => {
+  return (results.ResultSet?.Rows || []).slice(1).map(row => {
     const [rawEventSource, rawEventName, rawNumOccurrences] = row.Data!;
 
     return {
-      eventSource: rawEventName.VarCharValue!,
+      eventSource: rawEventSource.VarCharValue!,
       eventName: rawEventName.VarCharValue!,
       numOccurrences: parseInt(rawNumOccurrences.VarCharValue!, 10),
     };
