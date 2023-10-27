@@ -95,4 +95,14 @@ module "report_lambda" {
     EMAIL_DESTINATION       = var.email_destination
     POWERTOOLS_SERVICE_NAME = local.project_name
   }
+
+  event_rule_arns = {
+    trigger_report = aws_cloudwatch_event_rule.trigger_report.arn
+  }
+}
+
+resource "aws_cloudwatch_event_rule" "trigger_report" {
+  name = local.project_name
+
+  schedule_expression = "cron(0 7 ? * 2 *)"
 }
