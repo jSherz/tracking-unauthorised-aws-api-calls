@@ -3,7 +3,7 @@
 This project accompanies [a blog post on jSherz.com] that details how we can
 review unauthorised AWS API calls to form platform improvements.
 
-[a blog post on jSherz.com]: https://jsherz.com/aws/athena/glue/cloudtrail/2023/10/30/tracking-unauthorised-aws-api-calls.html
+[a blog post on jSherz.com]: https://jsherz.com/aws/athena/glue/cloudtrail/2023/10/28/tracking-unauthorised-aws-api-calls.html
 
 ## Getting started
 
